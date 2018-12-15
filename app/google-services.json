@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "772011245033",
+    "firebase_url": "https://gecal-25401.firebaseio.com",
+    "project_id": "gecal-25401",
+    "storage_bucket": "gecal-25401.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772011245033:android:3e14c0b2631caac6",
+        "android_client_info": {
+          "package_name": "com.smp.adrie.complaintsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772011245033-fitur2in64k5jh8b5mm3oe8cbcf6bhmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smp.adrie.complaintsystem",
+            "certificate_hash": "2985e94c318ebaf4650ddcd0f9feffaf2aa63c67"
+          }
+        },
+        {
+          "client_id": "772011245033-u0apav11q5312v53qqulmp971usvh9bd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkLYfyhJaHbvLWzPyH3kE0iN5DQWaHfpM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772011245033-u0apav11q5312v53qqulmp971usvh9bd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
