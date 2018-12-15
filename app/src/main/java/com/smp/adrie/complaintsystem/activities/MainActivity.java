@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rb_suffered, rb_witnessed;
     RadioGroup rg_choice;
     Button btn_record;
+    ScrollView sv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initFields() {
+
+        sv = (ScrollView) findViewById(R.id.sv_check_boxes);
+
+
+
         rb_suffered = (RadioButton) findViewById(R.id.rb_suffered);
         rb_witnessed = (RadioButton) findViewById(R.id.rb_witnessed);
         cb_sexual_harassment = (CheckBox) findViewById(R.id.cb_sexual_harassment);
@@ -144,11 +152,22 @@ public class MainActivity extends AppCompatActivity {
                                 cb_comments.setChecked(false);
 
                                 ed_comments.setText("Comentários");
+                                ed_comments.setEnabled(false);
 
                                 ed_name.setText("");
                                 ed_phone.setText("");
                                 ed_email.setText("");
                                 ed_comments_.setText("");
+
+                                sv.fullScroll(ScrollView.FOCUS_UP);
+
+
+                                Toast.makeText(MainActivity.this, "Registro feito", Toast.LENGTH_LONG).show();
+
+                            } else {
+                                Log.e("[COMPLAINT NOT SAVED]", task.getResult().toString());
+                                Toast.makeText(MainActivity.this, "Registro não realizado. Erro!",
+                                        Toast.LENGTH_LONG).show();
                             }
                         }
                     });

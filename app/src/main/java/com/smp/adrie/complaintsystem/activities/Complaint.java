@@ -36,7 +36,6 @@ public class Complaint {
     private String data_relato;
     private String plataforma;
     private boolean success = false;
-    CountDownLatch done;
 
     public String getPlataforma() {
         return plataforma;
@@ -60,7 +59,6 @@ public class Complaint {
 
     public Task saveToFirebase(final Activity activity){
 
-        done = new CountDownLatch(1);
         this.plataforma = "mobile";
         this.data_relato = new Date().toString();
         DatabaseReference fireRef = Firebase.getFirebase();
@@ -68,31 +66,7 @@ public class Complaint {
                 .child(String.valueOf(new Random()
                 .nextInt(999999)))
                 .setValue( this );
-// .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> t) {
-//                        if (t.isSuccessful()){
-//                            try {
-//                                done.await();
-//                            } catch (InterruptedException e) {
-//                                e.printStackTrace();
-//                            }
-//                            Toast.makeText(activity, "Registro feito", Toast.LENGTH_LONG).show();
-//                            success = true;
-//                        } else {
-//                            Log.e("[COMPLAINT NOT SAVED]", t.getResult().toString());
-//                            Toast.makeText(activity, "Registro não realizado. Erro!",
-//                                    Toast.LENGTH_LONG).show();
-//
-//                        }
-//                    }
-//                });
-//        try {
-//            done.await();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        return success;
+
     }
 
     public boolean isSuffered() {

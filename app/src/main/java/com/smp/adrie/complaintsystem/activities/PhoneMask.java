@@ -81,14 +81,14 @@ public abstract class PhoneMask  {
                 ediTxt.setText(mascara);
                 ediTxt.setSelection(mascara.length());
 
-            Log.i("[PHONE MASK]", String.valueOf(
-                        "CharSequence-> " + s +
-                        ". Start-> " + start +
-                        ". Before-> " +  before +
-                        ". Count-> " + count +
-                        ". IsUpdating-> " + isUpdating +
-                        ". Mask-> " + mask
-                 ));
+//            Log.i("[PHONE MASK]", String.valueOf(
+//                        "CharSequence-> " + s +
+//                        ". Start-> " + start +
+//                        ". Before-> " +  before +
+//                        ". Count-> " + count +
+//                        ". IsUpdating-> " + isUpdating +
+//                        ". Mask-> " + mask
+//                 ));
 
             }
         };
